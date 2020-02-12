@@ -1,0 +1,26 @@
+ports - lists opened ports on localhost
+pscan - port scanning
+    -ta target host
+    [-sa] specify local address to use, by default using InetAddress.getLocalHost()
+    [-n] number of threads to run, default 1
+    [-rs] - beginning of scanning range, default 0
+    [-re] - end  of scanning range, default 65535
+hosts - hosts responding to ping in local network
+    [-h] specify local address to use, by default using InetAddress.getLocalHost()
+    [-n] number of threads to run, default 1
+    [-t] ping request timeout in milis, default 500
+hopcnt - number of router on path to destination
+    -ta - target host
+    [-netint] - network interface to use
+    [-mtll] - max ttl to check, default 255
+    [-t] - timeout in millis, default 3000
+    [-sa] - address on interface to use
+traceroute - route to target host
+    -ta - target host
+    [-if] - network interface to use
+    [-mtll] - max ttl to check, default 127 (maximum, Pcap4J allows for only byte in function call for which it's max)
+    [-sa] - source address to use, default using v4 address of chosen interface
+    [-gw] - gateway address
+
+Default values of source addresses usually result in errors, cannot choose proper interface by available means
+-sa and -gw parameters are in most cases requireds
